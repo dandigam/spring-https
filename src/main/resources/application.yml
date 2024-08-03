@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: spring-https
+
+
+
+server:
+  port: 7777
+  ssl:
+    key-alias: spring-https
+    key-store: classpath:httpsfile.jks
+    key-store-password: 123456789
+    key-store-type: JKS
+    key-password: 123456789
+    
+    
+#Below cmd used to generate the SSL certificate in your terminal  
+#keytool -genkeypair -alias spring-https -keyalg RSA -keysize 2048 -validity 365 -keystore httpsfile.jks    
+
